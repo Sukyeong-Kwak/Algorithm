@@ -2,6 +2,10 @@
 
 [문제 링크](https://www.acmicpc.net/problem/9095) 
 
+<details>
+
+<summary><b>문제 요약</b></summary>
+
 ### 성능 요약
 
 메모리: 31120 KB, 시간: 40 ms
@@ -38,3 +42,4 @@
 
  <p>각 테스트 케이스마다, n을 1, 2, 3의 합으로 나타내는 방법의 수를 출력한다.</p>
 
+</details>

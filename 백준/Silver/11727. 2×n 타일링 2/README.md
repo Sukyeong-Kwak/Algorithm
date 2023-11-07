@@ -1,5 +1,10 @@
 # [Silver III] 2×n 타일링 2 - 11727 
 
+<details>
+
+<summary><b>문제 요약</b></summary>
+
+
 [문제 링크](https://www.acmicpc.net/problem/11727) 
 
 ### 성능 요약
@@ -29,4 +34,8 @@
 ### 출력 
 
  <p>첫째 줄에 2×n 크기의 직사각형을 채우는 방법의 수를 10,007로 나눈 나머지를 출력한다.</p>
+
+</details>
+
+## 풀이
 
