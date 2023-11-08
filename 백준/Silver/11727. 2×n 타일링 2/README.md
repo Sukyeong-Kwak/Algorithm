@@ -39,3 +39,10 @@
 
 ## 풀이
 
+<p>앞의 문제(11726. 2xn 타일링)를 풀고나니 이 문제는 쉬웠다. 이 문제에서는 앞의 문제에서 2x2 타일만 추가된 것이므로 아래 그림과 같이 11726. 2xn 타일링의 답에다가 끝에 2x2 타일을 고정시키고 N-2타일 개수를 추가해주면 되었다.</p>
+
+<p><center><b>t(n) = t(n-1) + 2t(n-2)</b></center></p><br>
+
+<p style="text-align: center;"><img alt="" src="./picture3.jpeg" style="height:130px; width:400px"></p>
+
+
