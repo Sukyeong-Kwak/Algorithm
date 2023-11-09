@@ -2,6 +2,10 @@
 
 [문제 링크](https://www.acmicpc.net/problem/2193) 
 
+<details>
+
+<summary><b>문제 요약</b></summary>
+
 ### 성능 요약
 
 메모리: 31120 KB, 시간: 44 ms
@@ -35,3 +39,16 @@
 
  <p>첫째 줄에 N자리 이친수의 개수를 출력한다.</p>
 
+</details>
+
+## 해결
+
+<p>일단 규칙을 찾으려고 펜부터 들고 써내려 갔다. 다행이 5번째까지 써내려가니 익숙한 규칙이 보였다.</p>
+
+<p style="text-align: center;"><img alt="" src="./2193_1.jpeg" style="height:170px; width:450px"></p>
+
+<p style="text-align: center;"><img alt="" src="./2193_2.jpeg" style="height:70px; width:450px"></p>
+
+### 풀이
+
+<p><b>dp[i] = dp[i-1]+dp[i-2]/b></p>
