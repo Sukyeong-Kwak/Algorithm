@@ -1,22 +1,25 @@
-def recur(idx, cost):
-    global max_cost
+def recur(idx):
+    global dp
     
     if idx == N:
-        max_cost = max(max_cost, cost)
-        return
-   
+        return 0
+
     if idx > N:
-        return
+        return -9999999999
+        
+    if dp[idx] != -1:
+        return dp[idx]
     
-    recur(idx + cons[idx][0], cost + cons[idx][1])
-    recur(idx+1, cost)
+    dp[idx] = max(recur(idx + cons[idx][0]) + cons[idx][1], recur(idx+1))
+    
+    return dp[idx]
             
 N = int(input())
 
 cons = [list(map(int, input().split())) for _ in range(N)]
 
-max_cost = 0
+dp = [-1 for _ in range(N)]
 
-recur(0, 0)
+recur(0)
 
-print(max_cost)
+print(max(dp))
