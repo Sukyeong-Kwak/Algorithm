@@ -1,25 +1,15 @@
-def recur(idx):
-    global dp
-    
-    if idx == N:
-        return 0
-
-    if idx > N:
-        return -9999999999
-        
-    if dp[idx] != -1:
-        return dp[idx]
-    
-    dp[idx] = max(recur(idx + cons[idx][0]) + cons[idx][1], recur(idx+1))
-    
-    return dp[idx]
-            
 N = int(input())
 
 cons = [list(map(int, input().split())) for _ in range(N)]
 
-dp = [-1 for _ in range(N)]
+dp = [0 for _ in range(N+1)]
 
-recur(0)
+for idx in range(N)[::-1]:
+    
+    
+    if idx + cons[idx][0] > N:
+        dp[idx] = dp[idx+1]
+    else:
+        dp[idx] = max(dp[idx + cons[idx][0]] + cons[idx][1], dp[idx+1])
 
-print(max(dp))
+print(dp[0])
