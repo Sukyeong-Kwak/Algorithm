@@ -4,7 +4,7 @@ sys.setrecursionlimit(10**8)
 
 def recur(y, x):
     
-    if dp[y][x] != 0:
+    if dp[y][x] != -1:
         return dp[y][x]
     
     for dx, dy in [[1,0],[-1,0],[0,1],[0,-1]]:
@@ -21,7 +21,7 @@ n = int(input())
 
 graph = [list(map(int, input().split())) for _ in range(n)]
 
-dp = [[0 for _ in range(n)] for _ in range(n)]
+dp = [[-1 for _ in range(n)] for _ in range(n)]
 
 # 모든 점을 방문한다
 
@@ -35,4 +35,4 @@ for y in range(n):
     for x in range(n):
         recur(y,x)
 
-print(max(map(max, dp)) + 1) 
+print(max(map(max, dp)) + 2) 
